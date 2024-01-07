@@ -71,6 +71,9 @@ fun opToggleButtonChangeListeners(bitmap: Bitmap, previewBitmap: ImageView):
         binding.previewBitmap.setImageBitmap(bitmap)
         //Log.d("MyTag", buttonView.tag as String + " " + isChecked)
         opMap[buttonView.tag as String] = isChecked
+
+        // Intantiate a TensorImage object
+        // and load a bitmap into it.
         tensorImage = TensorImage(DataType.UINT8)
         tensorImage?.load(bitmap)
 
